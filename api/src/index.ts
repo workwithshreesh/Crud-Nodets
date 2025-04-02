@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 3000; // if not specified in .env
 // cors policy
 app.use(
   cors({
-    origin: "*", 
+    origin: "https://crud-nodets.vercel.app", 
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
   })
