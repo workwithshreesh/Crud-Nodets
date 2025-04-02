@@ -7,6 +7,13 @@ This project is a **Node.js + TypeScript + Express + TypeORM** based **CRUD API*
 https://crud-nodets.onrender.com/api
 ```
 
+## 🚀 Video
+
+https://github.com/user-attachments/assets/96c434a3-ae26-45c7-8546-a10e17fc45de
+
+
+
+
 ## 📌 Features
 - CRUD operations for products
 - Image upload using **Multer**
