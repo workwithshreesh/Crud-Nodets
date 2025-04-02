@@ -6,7 +6,7 @@ import { plainToClass } from "class-transformer";
 
 class ProductController {
 
-  //  create controller to add the product
+  //  created controller to add the product
   static async createProduct(req: Request, res: Response) {
     try {
       const { sku, name, price } = req.body;
@@ -31,17 +31,17 @@ class ProductController {
       // Handle image uploads
       const files = req.files as Express.Multer.File[];
 
-      // check and remove prefix no need to handle in angular
+      // check and remove prefix no need to handle in angular and assign filename to image.product
       if (files && files.length > 0) {
         product.images = files.map((file) => {
           const image = new ProductImage();
-          image.image_url = file.filename; // No `uploads\\` prefix
+          image.image_url = file.filename; // No `uploads\\` prefix 
           image.product = product;
           return image;
         });
       }
 
-
+      // to save 
       await AppDataSource.manager.save(product);
 
       // Convert to plain object to avoid circular reference
