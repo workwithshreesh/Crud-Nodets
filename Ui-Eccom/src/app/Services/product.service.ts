@@ -28,16 +28,16 @@ export class ProductService {
   }
 
   // POST create a new product
-  createProduct(product: Product): Observable<Product> {
-    return this.http.post<Product>(this.Base_URL, product).pipe(
+  createProduct(product: any): Observable<any> {
+    return this.http.post<any>(this.Base_URL, product).pipe(
       catchError(this.handleError)
     );
   }
 
 
   // PUT update an existing product
-  updateProduct(id: number, product: Product ): Observable<Product> {
-    return this.http.put<Product>(`${this.Base_URL}/${id}`, product).pipe(
+  updateProduct(id: number, product: any ): Observable<any> {
+    return this.http.put<any>(`${this.Base_URL}/${id}`, product).pipe(
       catchError(this.handleError)
     );
   }
