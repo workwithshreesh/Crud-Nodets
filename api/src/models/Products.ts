@@ -20,8 +20,5 @@ export class Product {
   @OneToMany(() => ProductImage, (image) => image.product, { cascade: true })
   images!: ProductImage[];
 
-  @Expose()
-  get imageUrls(): string[] {
-    return this.images?.map((img) => img.image_url) || [];
-  }
+
 }
