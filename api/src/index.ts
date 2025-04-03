@@ -39,11 +39,11 @@ app.use(
 // Initialize database connection and start server
 AppDataSource.initialize()
   .then(() => {
-    console.log("✅ Database connected successfully");
+    console.log("Database connected successfully");
     app.listen(PORT, () =>
-      console.log(`🚀 Server started at http://localhost:${PORT}`)
+      console.log(`Server started at http://localhost:${PORT}`)
     );
   })
   .catch((error) => {
-    console.error("❌ Database connection failed:", error);
+    console.error("Database connection failed:", error);
   });
